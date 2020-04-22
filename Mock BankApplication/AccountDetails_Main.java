@@ -14,9 +14,9 @@ public class AccountDetails_Main {
 		System.out.println("Please select the option:\nY: For creating a new Account\nE: Update the details for an Existing account\nV: View the Account details\nD: Delete an account\nN: Close this Screen");
 		     char c;
 		     c=sc.next().charAt(0);
-		     while(c != 'N') {
+		     while((c != 'N')||(c!='n')) {
 		    	 
-		    	 if(c=='Y') {		
+		    	 if((c=='Y')||(c=='y')) {		
 		    	 AccountDetails account=new AccountDetails();		
 		    	 
 		    	 
@@ -150,7 +150,7 @@ public class AccountDetails_Main {
 		    	 
 
 		    	 //Modifying the Account
-		    	 else if(c=='E') {
+		    	 else if((c=='E')||(c=='e')) {
 		    		 
 				    	 long an;
 				    	 System.out.println("Enter the Account Number");
@@ -226,7 +226,7 @@ public class AccountDetails_Main {
 				     }
 //__________________________________________________________________________________
 		    	 
-		    	 else if((c!='Y')&&(c!='N')&&(c != 'E')&&(c!='V')&&(c!='D')) {
+		    	 else if((c!='Y')&&(c!='N')&&(c != 'E')&&(c!='V')&&(c!='D')&&(c!='y')&&(c!='n')&&(c=='e')&&(c=='v')&&(c=='d')) {
 			    	 System.out.println("Invalid option choosen");
 			    	 System.out.println("_____________________________________________");
 			 		System.out.println("Please select the option:\nY: For creating a new Account\nE: Update the details for an Existing account\nV: View the Account details\nN: Close this Screen");
@@ -234,7 +234,7 @@ public class AccountDetails_Main {
 			     }
 //__________________________________________________________________________________
     	 
-		    	 else if(c=='V') {
+		    	 else if((c=='V')||(c=='v')) {
 		    		 long an;
 		    		 System.out.println("Enter the Account Number");
 			    	 an=sc.nextLong();
@@ -292,7 +292,7 @@ public class AccountDetails_Main {
 			     }
 //__________________________________________________________________________________
 
-			     else if(c=='D') {
+			     else if((c=='D')||(c=='d')) {
 			    	 long an;
 			    	 while(true) {
 		    		 System.out.println("Enter the Account Number");
@@ -318,7 +318,7 @@ public class AccountDetails_Main {
 
 		     }
  		   
-		     	if(c=='N') {
+		     	if((c=='N')||(c=='n')) {
 			    	 System.out.println("Thanks for using our service");
 			    	 System.out.println("_____________________________________________");
 			     }
