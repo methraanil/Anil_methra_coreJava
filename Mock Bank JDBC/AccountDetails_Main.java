@@ -115,7 +115,7 @@ public class AccountDetails_Main {
 				while(true) {
 					System.out.println("Enter account number: ");
 					String accnum=sc.nextLine();
-					if((accnum!=null)&&(accnum.length()>=7)) {
+					if((accnum!=null)&&(accnum.length()<=8)) {
 						try {
 							account.setAccountNumber(Long.parseLong(accnum));
 							int n=Integer.parseInt(accnum);
@@ -123,12 +123,12 @@ public class AccountDetails_Main {
 							break;
 						}
 						catch(NumberFormatException e) {
-							System.out.println("*****PLEASE ENTER NUMERIC VALUES ONLY*****\n");
+							System.out.println("*****PLEASE ENTER NUMERIC VALUES ONLY and LESS THAN 8 DIGITS*****\n");
 						}
 					}
 			
 					else {
-						System.out.println("*****ENTER VALID ACCOUNT NUMBER GREATER THAN 7 DIGITS*****\n");
+						System.out.println("*****ENTER VALID ACCOUNT NUMBER LESS THAN 8 DIGITS*****\n");
 						
 					}
 				
@@ -388,7 +388,7 @@ public class AccountDetails_Main {
 			     }
     //____________________________________________________________________________________
 		    	 
-		    	 else// if((c!='Y')&&(c!='N')&&(c != 'E')&&(c!='V')&&(c!='D')&&(c!='y')&&(c!='n')&&(c=='e')&&(c=='v')&&(c=='d')) 
+		    	 else
 		    		 {
 			    	 System.out.println("Invalid option choosen");
 			    	 System.out.println("_____________________________________________");

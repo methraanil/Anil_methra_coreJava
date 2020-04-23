@@ -242,7 +242,7 @@ public class AccountDetails_Main {
 			    		 System.out.println("Do you want to DEPOSIT or WITHDRAW:\n press Y: for Yes\n press any key : for No ");
 			    		 char y;
 			    		 y=sc.next().charAt(0);
-			    		 if(y=='Y') {
+			    		if((y=='Y')||(y=='y')) {
 			    			 while(true) {
 			    			 System.out.println("Select your option 1: Deposit\t2: Withdraw :");
 			    			 int p=sc.nextInt();
